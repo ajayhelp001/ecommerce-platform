@@ -1,0 +1,39 @@
+@import 'font';
+:root{
+    --theme1: #d9a373;
+    --theme2: #f5f5f5;
+    --theme3: #f0f2ee;
+    --white: #fff;
+    --white-light: #f2f2f2;
+    --black: #000;
+    --black-60: #00000066;
+    --black-40: #000000a4;
+    --light-dark: #353535;
+    --gray: #878585;
+    --red: #FF0000;
+    --green: #17cc37;
+    --red-dark: #8c0b20;
+    --white-mlt: #fdfdfd;
+}
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px
+}
+::-webkit-scrollbar-track-piece {
+    background: var(--theme3)
+}
+::-webkit-scrollbar-thumb {
+    background: var(--theme1)
+}
+body{
+    font-family: 'Kanit' !important;
+}
+
+
+@import 'header';
+@import 'form';
+@import 'button';
+@import 'index';
+@import 'other';
+@import 'footer';
+@import 'responsive';

@@ -1,0 +1,261 @@
+.themebtn {
+    border-radius: 0px;
+    box-shadow: none;
+    border: 2px solid var(--black);
+    font-size: 14px;
+    padding: 10px 30px;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: all ease-in-out 0.3s;
+    &::before{
+        content: '';
+        height: 0px;
+        width: 100%;
+        background-color: var(--black);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all ease-in-out 0.3s;
+    }
+    & span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        transform: rotate(-45deg);
+        & img {
+            height: 100%;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+    &:hover, &:active{
+        color: var(--white) !important;
+        border-color: var(--black) !important;
+        &::before{
+            height: 100%;
+        }
+        & span {
+            & img {
+                filter: invert(1);
+                transform: translateX(5px);
+            }
+        }
+    }
+    &.fill{
+        background-color: var(--black);
+        color: var(--white);
+        & span {
+            & img {
+                filter: invert(1);
+            }
+        }
+        &:hover,&:active{
+            color: var(--black) !important;
+            &::before{
+                background-color: var(--white);
+            }
+            & span {
+                & img {
+                    filter: invert(0);
+                }
+            }
+        }
+    }
+    &.cart{
+        padding: 7px 25px;
+    }
+    &.outoffstock {
+        cursor: auto;
+        background-color: var(--white);
+        color: var(--black);
+        &::before{
+            display: none;
+        }
+        &:active{
+            background-color: var(--white) !important;
+            color: var(--black) !important;
+        }
+    }
+    &.filterBtn {
+        & .filterImg{
+            width: 18px;
+            transition: all ease-in-out 0.3s;
+        }
+        &:hover{
+            & .filterImg{
+                filter: invert(1);
+            }
+        }
+    }
+}
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    background: var(--black);
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.select2 {
+    & .selection {
+        & .select2-selection {
+            border-radius: 0px;
+            box-shadow: none;
+            border: 2px solid var(--black);
+            padding: 10px 30px;
+            height: auto;
+            background-color: var(--black);
+            outline: none;
+            & .select2-selection__rendered{
+                padding: 0px 10px 0px 0px;
+                color: var(--white);
+                font-size: 14px;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+        & .select2-selection__arrow {
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            & b {
+                border-width: 6px 5px 0 5px;
+                margin-top: -4px;
+                border-color: var(--white) transparent transparent transparent;
+            }
+        }
+    }
+    &.select2-container--open{
+        & .selection {
+            & .select2-selection{
+                & .select2-selection__arrow {
+                    & b {
+                        border-width: 0 5px 6px 5px;
+                        border-color: transparent transparent var(--white) transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.select2-dropdown {
+    border: none;
+    border-radius: 0px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 14px;
+    & .select2-search {
+        & input{
+            box-shadow: none;
+            border-radius: 4px;
+            background: transparent;
+            border-color: var(--theme1) !important;
+            color: var(--white);
+            outline: none;
+            font-size: 14px;
+        }
+    }
+    & .select2-results__options {
+        & li{
+            padding: 8px 10px;
+            &.select2-results__option--highlighted, &.select2-results__option--selected{
+                background-color: var(--light-dark);
+            }
+            // &.select2-results__option--selected {
+            //     background-color: var(--theme1);
+            // }
+        }
+    }
+}
+
+.actionBtn {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 5px;
+    display: inline-flex;
+    transition: all ease-in-out 0.3s;
+    &.addcart{
+        background-color: rgba(9,137,255,.06);
+        &:hover{
+            background-color: rgba(9,137,255,.1);
+        }
+    }
+    &.close{
+        background-color: rgba(255, 9, 9, 0.06);
+        &:hover{
+            background-color: rgba(255, 9, 9, 0.1);
+        }
+    }
+    & img {
+        width: 100%;
+    }
+}
+
+.bg_none_select2 {
+    & .select2 {
+        width: 100% !important;
+        & .selection {
+            & .select2-selection {
+                border-width: 1px;
+                padding: .5rem .75rem;
+                background-color: var(--white);
+                min-height: 45px;
+                & .select2-selection__rendered{
+                    padding: 0px 10px 0px 0px;
+                    color: var(--black-40);
+                    font-size: 16px;
+                }
+            }
+            & .select2-selection__arrow {
+                & b {
+                    border-color: var(--light-dark) transparent transparent transparent;
+                }
+            }
+        }
+        &.select2-container--open{
+            & .selection {
+                & .select2-selection{
+                    & .select2-selection__arrow {
+                        & b {
+                            border-color: transparent transparent var(--light-dark) transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 767.98px) {
+    .themebtn{
+        padding: 8px 30px;
+    }
+    .select2 {
+        & .selection {
+            & .select2-selection {
+                padding: 8px 30px;
+            }
+        }
+    }
+}
+
+
+
+.table>:not(caption)>*>*{
+    border-color: var(--theme3);
+}

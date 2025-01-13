@@ -1,0 +1,142 @@
+.footer {
+    // background-color: var(--black);
+    background: url(../images/footer-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 50px 0px 20px 0px;
+    & .innerfluid{
+        border-bottom: 0.5px solid var(--light-dark);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        & .linkGroup {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            & .footer_Links {
+                text-decoration: none;
+                color: var(--white);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 110%;
+                transition: all ease-in-out 0.3s;
+                & span{
+                    transition: all ease-in-out 0.3s;
+                    position: relative;
+                    &::before, &::after{
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: var(--white);
+                        left: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    &::before{
+                        transition: all ease-in-out 0.4s;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                    }
+                    &::after{
+                        height: 2px;
+                        width: 0px;
+                        transition: all ease-in-out 0.3s;
+                    }
+                }
+                &:hover{
+                    color: var(--theme1);
+                    & span {
+                        padding-left: 20px;
+                        &::before, &::after{
+                            opacity: 1;
+                            visibility: visible;
+                            background-color: var(--theme1);
+                        }
+                        &::before{
+                            left: 10px;
+                        }
+                        &::after{
+                            width: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .link_Heading {
+        font-size: 20px;
+        line-height: 110%;
+        color: var(--theme1);
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    & .paymentsource {
+        & .copyright {
+            margin: 0px;
+            color: var(--white);
+            font-size: 14px;
+            & a {
+                text-decoration: none;
+                color: var(--white);
+                transition: all ease-in-out 0.3s;
+                &:hover{
+                    color: var(--theme1);
+                }
+            }
+        }
+        & .paymentcard {
+            height: 16px;
+            & img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991.98px){
+    .footer {
+        & .link_Heading {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+}
+@media screen and (max-width: 767.98px){
+    .footer {
+        padding: 40px 0px 20px 0px;
+        & .innerfluid{
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            & .linkGroup {
+                gap: 0px;
+                & .footer_Links {
+                    font-size: 12px;
+                    & span{
+                        &::before{
+                            width: 6px;
+                            height: 6px;
+                        }
+                    }
+                }
+            }
+        }
+        & .link_Heading {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        & .paymentsource {
+            & .copyright {
+                font-size: 12px;
+            }
+            & .paymentcard {
+                height: 16px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 575.98px){
+    
+}
