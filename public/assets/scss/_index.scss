@@ -280,8 +280,10 @@ section{
             overflow: hidden;
             & .productImg {
                 position: relative;
+                max-height: 282px;
                 & img {
                     width: 100%;
+                    object-fit: cover;
                     transition: all .8s;
                 }
                 & .img2{
@@ -378,7 +380,7 @@ section{
                 left: 7px;
                 z-index: 3;
                 & span{
-                    width: 52px;
+                    width: fit-content !important;
                     height: 24px;
                     border-radius: 2px;
                     display: flex;
@@ -391,6 +393,7 @@ section{
                     text-transform: uppercase;
                     background-color: var(--black);
                     z-index: 1;
+                    padding: 5px 10px;
                     &.new {
                         font-size: 12px;
                     }
@@ -561,7 +564,7 @@ section{
 .bannerSection{
     & .innerfluid {
         & .banner {
-            background: url(../images/iphone_banner.png) no-repeat;
+            background-image: url(../images/iphone_banner.png) no-repeat;
             background-position: 50%;
             background-size: cover;
             padding: 100px 50px;
@@ -1244,7 +1247,6 @@ section{
                         width: 35px;
                         height: unset;
                         font-size: 10px;
-                        padding: 2px 0px;
                         &.new {
                             font-size: 8px;
                         }

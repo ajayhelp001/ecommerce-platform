@@ -29,6 +29,14 @@ body{
     font-family: 'Kanit' !important;
 }
 
+.allcategory {
+    max-height: 200px;
+    overflow: hidden auto;
+}
+.filterSelect {
+    z-index: 10;
+}
+
 
 @import 'header';
 @import 'form';
