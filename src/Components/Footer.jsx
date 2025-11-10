@@ -29,10 +29,10 @@ const Footer = () => {
     const copyrightDate = new Date().getFullYear()
 
     const paymentMethod = [
-       { paymentSponser : 'visa card', paymentLogo : 'assets/images/visa.png'},
-       { paymentSponser : 'maestro card', paymentLogo : 'assets/images/maestro.png'},
-       { paymentSponser : 'american-express card', paymentLogo : 'assets/images/american-express.png'},
-       { paymentSponser : 'master card', paymentLogo : 'assets/images/mastercard.png'}
+       { paymentSponser : 'visa card', paymentLogo : '/assets/images/visa.png'},
+       { paymentSponser : 'maestro card', paymentLogo : '/assets/images/maestro.png'},
+       { paymentSponser : 'american-express card', paymentLogo : '/assets/images/american-express.png'},
+       { paymentSponser : 'master card', paymentLogo : '/assets/images/mastercard.png'}
     ]
   return (
     <>
